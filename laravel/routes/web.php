@@ -24,7 +24,7 @@ Route::name('user.')->group(function (){
    //Route::post('/login', [])
     Route::get('/logout', function (){
         \Illuminate\Support\Facades\Auth::logout();
-        return view('/')
+        return view('/');
     })->name('logout');
     Route::get('/registation', function (){
         if (\Illuminate\Support\Facades\Auth::check()) {
