@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::name('user.')->group(function (){
-    Route::view('private','private')->middleware('auth')->name('private');
+    Route::view('/private','private')->middleware('auth')->name('private');
     Route::get('/login', function () {
         if (\Illuminate\Support\Facades\Auth::check()) {
             return redirect(\route('user.private'));
@@ -29,4 +29,5 @@ Route::name('user.')->group(function (){
         }
         return view('registation');
     })->name('registation');
+    Route::post('/registation', []);
 });
