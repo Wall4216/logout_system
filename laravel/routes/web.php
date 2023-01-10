@@ -22,12 +22,15 @@ Route::name('user.')->group(function (){
         return view('login');
     })->name('login');
    //Route::post('/login', [])
-    //Route::get('/logout', [])->name('logout');
+    Route::get('/logout', function (){
+        \Illuminate\Support\Facades\Auth::logout();
+        return view('/')
+    })->name('logout');
     Route::get('/registation', function (){
         if (\Illuminate\Support\Facades\Auth::check()) {
             return redirect(\route('user.private'));
         }
         return view('registation');
     })->name('registation');
-    Route::post('/registation', []);
+    Route::post('/registration', [\App\Http\Controllers\RegisterController::class, 'save']);
 });

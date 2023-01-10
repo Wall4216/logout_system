@@ -21,7 +21,8 @@
 </head>
 <body>
 <h1>Регистрация</h1>
-<form class="col-3 offset-4 border rounded" method="POST" action="{{route('user.registation')}}">
+<form class="col-3 offset-4 border rounded" method="Get" action="{{route('user.registation')}}">
+    @method('put')
     @csrf
     <div class="form-group">
         <label for="email" class="col-form-label-lg">Ваш Email</label>
