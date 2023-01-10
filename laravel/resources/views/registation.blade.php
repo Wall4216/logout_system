@@ -9,8 +9,8 @@
     <link href="{{asset('css/app.css')}}">
 </head>
 <body>
-<h1>Вход</h1>
-<form class="col-3 offset-4 border rounded" method="POST" action="{{route('user.login')}}">
+<h1>Регистрация</h1>
+<form class="col-3 offset-4 border rounded" method="POST" action="{{route('user.registation')}}">
     @csrf
     <div class="form-group">
         <label for="email" class="col-form-label-lg">Ваш Email</label>
@@ -28,3 +28,4 @@
 </form>
 </body>
 </html>
+
