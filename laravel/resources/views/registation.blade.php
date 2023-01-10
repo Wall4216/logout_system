@@ -17,6 +17,7 @@
         <input class="form-control" id="email" name="email" type="text" value="" placeholder="Email">
         @error('email')
         <div class="alert alert-danger">{{$message}}</div>
+        @enderror
     </div>
     <div class="form-group">
         <label for="password" class="col-form-label-lg">Пароль</label>
